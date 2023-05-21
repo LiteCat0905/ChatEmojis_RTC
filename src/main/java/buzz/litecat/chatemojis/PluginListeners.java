@@ -1,4 +1,4 @@
-package com.rmjtromp.chatemojis;
+package buzz.litecat.chatemojis;
 
 import com.earth2me.essentials.User;
 import net.ess3.api.events.PrivateMessagePreSendEvent;

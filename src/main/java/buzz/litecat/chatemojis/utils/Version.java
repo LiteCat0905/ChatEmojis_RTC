@@ -1,7 +1,8 @@
-package com.rmjtromp.chatemojis.utils;
+package buzz.litecat.chatemojis.utils;
 
-import com.rmjtromp.chatemojis.exceptions.UnsupportedVersionException;
 import org.jetbrains.annotations.NotNull;
+
+import buzz.litecat.chatemojis.exceptions.UnsupportedVersionException;
 
 import java.util.Arrays;
 

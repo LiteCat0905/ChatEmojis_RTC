@@ -1,12 +1,5 @@
-package com.rmjtromp.chatemojis;
+package buzz.litecat.chatemojis;
 
-import com.rmjtromp.chatemojis.exceptions.ConfigException;
-import com.rmjtromp.chatemojis.utils.BukkitUtils;
-import com.rmjtromp.chatemojis.utils.ComponentBuilder;
-import com.rmjtromp.chatemojis.utils.Config;
-import com.rmjtromp.chatemojis.utils.Config.ConfigurationReference;
-import com.rmjtromp.chatemojis.utils.Version;
-import com.rmjtromp.chatemojis.windows.SettingsWindow;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.hover.content.Text;
@@ -16,6 +9,14 @@ import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+
+import buzz.litecat.chatemojis.exceptions.ConfigException;
+import buzz.litecat.chatemojis.utils.BukkitUtils;
+import buzz.litecat.chatemojis.utils.ComponentBuilder;
+import buzz.litecat.chatemojis.utils.Config;
+import buzz.litecat.chatemojis.utils.Version;
+import buzz.litecat.chatemojis.utils.Config.ConfigurationReference;
+import buzz.litecat.chatemojis.windows.SettingsWindow;
 
 import java.io.File;
 import java.io.IOException;
@@ -66,9 +67,9 @@ public final class ChatEmojis extends JavaPlugin {
             if(sender.hasPermission("chatemojis.command") || sender.hasPermission("chatemojis.list")) {
                 if(args.length == 0 || (args.length == 1 && args[0].equalsIgnoreCase("list"))) {
                     if(sender instanceof Player) {
-                        ComponentBuilder builder = new ComponentBuilder("&6ChatEmojis &7(v"+getDescription().getVersion()+")\n");
+                        ComponentBuilder builder = new ComponentBuilder("&6RTChatEmojis &7(v"+getDescription().getVersion()+")\n");
 
-                        BaseComponent[] hoverMessage = new ComponentBuilder("&6ChatEmojis\n&7Version: &e"+getDescription().getVersion()+"\n&7Author: &eRMJTromp\n\n&eClick to open spigot resource page.").create();
+                        BaseComponent[] hoverMessage = new ComponentBuilder("&6RTChatEmojis\n&7Version: &e"+getDescription().getVersion()+"\n&7Author: &eLiteCat").create();
 
                         // new Text(BaseComponent[]) is not added until 1.16
                         HoverEvent hoverEvent;
@@ -94,8 +95,8 @@ public final class ChatEmojis extends JavaPlugin {
                 } else if(args.length == 1) {
                     if(args[0].equalsIgnoreCase("help")) {
                         List<String> lines = new ArrayList<>();
-                        lines.add("&6ChatEmojis &7- &fList of Commands");
-                        lines.add("&e/emoji [list] &e- &7Shows a list of all emojis");
+                        lines.add("&6RTChatEmojis &7- &f指令列表");
+                        lines.add("&e/emoji [list] &e- &7展示emoji列表");
                         lines.add("&e/emoji help &e- &7Shows this list of commands");
                         lines.add("&e/emoji reload &e- &7Reloads all emojis");
                         lines.add("&e/emoji version &e- &7Shows the plugin version");
@@ -112,17 +113,17 @@ public final class ChatEmojis extends JavaPlugin {
                                 e.printStackTrace();
                             }
                             long interval = System.currentTimeMillis() - start;
-                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&eAll emojis and groups have been reloaded &7("+Long.toString(interval)+"ms)"));
-                        } else sender.sendMessage(ChatColor.RED + "You don't have enough permission to use this command.");
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e所有表情符号和群组均已重新加载 &7("+Long.toString(interval)+"ms)"));
+                        } else sender.sendMessage(ChatColor.RED + "您没有足够的权限来使用此命令。");
                     } else if(args[0].equalsIgnoreCase("settings")) {
                         if(sender instanceof Player) {
                             if(sender.hasPermission("chatemojis.admin")) ((Player) sender).openInventory(settingsWindow.getInventory());
                             else sender.sendMessage(ChatColor.RED + "You don't have enough permission to use this command.");
                         } else sender.sendMessage(ChatColor.RED + "Emojis are only available to players.");
-                    } else if(args[0].toLowerCase().matches("^v(?:er(?:sion)?)?$")) sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7This server is currently running &eChatEmojis &7(v"+getDescription().getVersion()+")"));
+                    } else if(args[0].toLowerCase().matches("^v(?:er(?:sion)?)?$")) sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7服务器正在运行 &eRTChatEmojis &7(v"+getDescription().getVersion()+")"));
                     else sender.sendMessage(ChatColor.RED + "Unknown argument. Try \"/emoji help\" for a list of commands.");
                 } else sender.sendMessage(ChatColor.RED + "Too many arguments. Try \"/emoji help\" for a list of commands.");
-            } else sender.sendMessage(ChatColor.RED + "You don't have enough permission to use this command.");
+            } else sender.sendMessage(ChatColor.RED + "您没有足够的权限来使用此命令。");
             return true;
         });
     }

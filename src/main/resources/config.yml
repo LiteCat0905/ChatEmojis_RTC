@@ -1,15 +1,15 @@
 hypixel:
   basic:
     heart:
-      emoticon: '<3'
+      emoticon: ':xin:'
       emoji: '&c❤'
     star:
       emoticon: ':star:'
       emoji: '&6✮'
-    yes:
+    'true':
       emoticon: ':yes:'
       emoji: '&a✔'
-    no:
+    'false':
       emoticon: ':no:'
       emoji: '&c✖'
     java:
@@ -19,37 +19,37 @@ hypixel:
       emoticon: ':arrow:'
       emoji: '&e➜'
     shrug:
-      emoticon: ':shrug:'
+      emoticon: ':wunai:'
       emoji: '&e¯\\_(ツ)_/¯'
     tableflip:
-      emoticon: ':tableflip:'
+      emoticon: ':xianzhuo:'
       emoji: '&c(╯°□°）╯&r&f︵&r&7 ┻━┻'
     wave:
-      emoticon: 'o/'
+      emoticon: o/
       emoji: '&d( ﾟ◡ﾟ)/'
-    123:
+    '123':
       emoticon: ':123:'
       emoji: '&a1&r&e2&r&c3'
     totem:
-      emoticon: ':totem:'
+      emoticon: ':tuteng:'
       emoji: '&b☉&r&e_&r&b☉'
     typing:
-      emoticon: ':typing:'
+      emoticon: ':xiezi:'
       emoji: '&e✎&r&6...'
     maths:
-      emoticon: ':maths:'
+      emoticon: ':shuxue:'
       emoji: '&a√&r&e&l(&r&aπ&r&a&l+x&r&e&l)&r&a&l=&r&c&lL'
     snail:
-      emoticon: ':snail:'
+      emoticon: ':woniu:'
       emoji: '&e@&r&a''&r&e-&r&a'''
     thinking:
-      emoticon: ':thinking:'
+      emoticon: ':sikao:'
       emoji: '&6(&r&a0&r&6.&r&ao&r&c?&r&6)'
     gimme:
-      emoticon: ':gimme:'
+      emoticon: ':geiwo:'
       emoji: '&b༼つ◕_◕༽つ'
     wizard:
-      emoticon: ':wizard:'
+      emoticon: ':mofa:'
       emoji: '&e(&r&b''&r&e-&r&b''&r&e)⊃&r&c━&r&d☆ﾟ.*･｡ﾟ'
     pvp:
       emoticon: ':pvp:'
@@ -61,60 +61,72 @@ hypixel:
       emoticon: ':oof:'
       emoji: '&c&lOOF'
     puffer:
-      emoticon: ':puffer:'
+      emoticon: ':chuixu:'
       emoji: '&e&l<(''O'')>'
   premium:
     snow:
-      emoticon: ':snow:'
+      emoticon: ':xueren:'
       emoji: '&b☃'
     yey:
-      emoticon: ':yey:'
+      emoticon: ':ye:'
       emoji: '&aヽ (◕◡◕) ﾉ'
     sloth:
-      emoticon: ':sloth:'
+      emoticon: ':landuo:'
       emoji: '&6(&r&8・&r&6⊝&r&8・&r&6)'
     hey:
-      emoticon: 'h/'
+      emoticon: h/
       emoji: '&eヽ(^◇^*)/'
     cat:
       emoticon: ':cat:'
       emoji: '&e= &r&b＾● ⋏ ●＾&r&e ='
     dab:
-      emoticon: ':dab:'
+      emoticon: ':huanhu:'
       emoji: '&d<&r&eo&r&d/'
     dog:
       emoticon: ':dog:'
       emoji: '&6(ᵔᴥᵔ)'
     joy:
-      emoticon: [ '^_^', '^-^' ]
+      emoticon:
+      - ^_^
+      - ^-^
       emoji: '&a$1'
     dj:
       emoticon: ':dj:'
       emoji: '&9ヽ&r&5(&r&d⌐&r&c■&r&6_&r&e■&r&b)&r&3ノ&r&9♬'
     cute:
-      emoticon: ':cute:'
+      emoticon: ':keai:'
       emoji: '&e(&r&a✿&r&e◠‿◠)'
 facepalm:
-  emoticon: ':facepalm:'
+  emoticon: ':wulian:'
   emoji: '&6(&e－‸ლ&6)'
 skull:
-  emoticon: ':skull:'
+  emoticon: ':tou:'
   emoji: '&7☠'
 uwu:
-  emoticon: 'UwU'
+  emoticon: UwU
   emoji: '&d$1'
 owo:
-  emoticon: 'OwO'
+  emoticon: OwO
   emoji: '&b$1'
 happy:
-  emoticon: ':)'
-  emoji: '☺'
+  emoticon: :)
+  emoji: ☺
 sad:
-  emoticon: ':('
-  emoji: '☹' 
+  emoticon: :(
+  emoji: ☹
 music:
   emoticon: ':music:'
-  emoji: ['&c♫', '&9♬', '&3♪', '&5♩', '&a♭', '&e♪'] 
+  emoji:
+  - '&c♫'
+  - '&9♬'
+  - '&3♪'
+  - '&5♩'
+  - '&a♭'
+  - '&e♪'
 playername:
   emoticon: ':playername:'
   emoji: '&9%player_name%'
+settings:
+  use:
+    books: true
+    signs: true

@@ -1,4 +1,4 @@
-package com.rmjtromp.chatemojis.exceptions;
+package buzz.litecat.chatemojis.exceptions;
 
 
 import org.jetbrains.annotations.NotNull;

@@ -1,4 +1,4 @@
-package com.rmjtromp.chatemojis.utils;
+package buzz.litecat.chatemojis.utils;
 
 import lombok.Getter;
 import lombok.experimental.Delegate;

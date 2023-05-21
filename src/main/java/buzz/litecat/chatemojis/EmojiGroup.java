@@ -1,6 +1,5 @@
-package com.rmjtromp.chatemojis;
+package buzz.litecat.chatemojis;
 
-import com.rmjtromp.chatemojis.exceptions.ConfigException;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.configuration.ConfigurationSection;
@@ -9,11 +8,13 @@ import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 import org.jetbrains.annotations.NotNull;
 
+import buzz.litecat.chatemojis.exceptions.ConfigException;
+
+import static buzz.litecat.chatemojis.ChatEmojis.NAME_PATTERN;
+import static buzz.litecat.chatemojis.ChatEmojis.RESERVED_NAMES;
+
 import java.util.*;
 import java.util.regex.Matcher;
-
-import static com.rmjtromp.chatemojis.ChatEmojis.NAME_PATTERN;
-import static com.rmjtromp.chatemojis.ChatEmojis.RESERVED_NAMES;
 
 class EmojiGroup {
 

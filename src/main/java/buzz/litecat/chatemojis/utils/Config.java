@@ -1,4 +1,4 @@
-package com.rmjtromp.chatemojis.utils;
+package buzz.litecat.chatemojis.utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,7 +46,7 @@ public class Config extends YamlConfiguration {
      * @throws InvalidConfigurationException Thrown when the given file is not a valid Configuration.
      */
     public static Config init(File file, String resource) throws IOException, InvalidConfigurationException {
-        if(file == null) throw new IllegalArgumentException("File can not be null");
+        if(file == null) throw new IllegalArgumentException("文件不能为空");
         if(!file.exists()) {
             file.getParentFile().mkdirs();
 
@@ -54,7 +54,7 @@ public class Config extends YamlConfiguration {
                 if(resource != null && !resource.isEmpty()) {
                     URL url = Config.class.getClassLoader().getResource(resource);
 
-                    if (url == null) throw new NullPointerException("Resource doesn't exist? Resource URL is null.");
+                    if (url == null) throw new NullPointerException("资源不存在？资源 URL 为空。");
 
                     URLConnection connection = url.openConnection();
                     connection.setUseCaches(false);
@@ -67,7 +67,7 @@ public class Config extends YamlConfiguration {
                             out.write(buf, 0, len);
                         }
                     }
-                } else throw new IllegalArgumentException("Resource can not be null or empty");
+                } else throw new IllegalArgumentException("资源不能为空或空");
             }
         }
 

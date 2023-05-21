@@ -1,8 +1,5 @@
-package com.rmjtromp.chatemojis.windows;
+package buzz.litecat.chatemojis.windows;
 
-import com.rmjtromp.chatemojis.ChatEmojis;
-import com.rmjtromp.chatemojis.utils.Version;
-import com.rmjtromp.chatemojis.utils.Window;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -12,6 +9,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import buzz.litecat.chatemojis.ChatEmojis;
+import buzz.litecat.chatemojis.utils.Version;
+import buzz.litecat.chatemojis.utils.Window;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,24 +38,24 @@ public class SettingsWindow extends Window {
         else CLOSE = new ItemStack(Material.valueOf("STAINED_GLASS_PANE"), 1, (short) 14);
         ItemMeta barrierMeta = CLOSE.getItemMeta();
         assert barrierMeta != null;
-        barrierMeta.setDisplayName(ChatColor.RED+"Close");
+        barrierMeta.setDisplayName(ChatColor.RED+"关闭");
         CLOSE.setItemMeta(barrierMeta);
 
         BOOK = new ItemStack(Material.BOOK);
         ItemMeta bookMeta = BOOK.getItemMeta();
         assert bookMeta != null;
-        bookMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&6&lBooks"));
+        bookMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&6&l书籍"));
         List<String> bookLore = new ArrayList<>();
-        Arrays.asList("&7Click this item to toggle whether or not", "&7emojis can be used in books.").forEach(lore -> bookLore.add(ChatColor.translateAlternateColorCodes('&', lore)));
+        Arrays.asList("&7单击此物品可切换是否","&7emojis可以在书籍中使用。").forEach(lore -> bookLore.add(ChatColor.translateAlternateColorCodes('&', lore)));
         bookMeta.setLore(bookLore);
         BOOK.setItemMeta(bookMeta);
 
-        SIGN = new ItemStack(Version.getServerVersion().isNewerThan(Version.V1_13) ? Material.valueOf("OAK_SIGN") : Material.valueOf("SIGN"));
+        SIGN = new ItemStack(Version.getServerVersion().isNewerThan(Version.V1_13) ? Material.valueOf("木牌") : Material.valueOf("SIGN"));
         ItemMeta signMeta = SIGN.getItemMeta();
         assert signMeta != null;
-        signMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&6&lSigns"));
+        signMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&6&l木牌"));
         List<String> signLore = new ArrayList<>();
-        Arrays.asList("&7Click this item to toggle whether or not", "&7emojis can be used on signs.").forEach(lore -> signLore.add(ChatColor.translateAlternateColorCodes('&', lore)));
+        Arrays.asList("&7单击此物品可切换是否", "&7emojis可以在木牌中使用.").forEach(lore -> signLore.add(ChatColor.translateAlternateColorCodes('&', lore)));
         signMeta.setLore(signLore);
         SIGN.setItemMeta(signMeta);
 
@@ -90,7 +91,7 @@ public class SettingsWindow extends Window {
             List<String> lores = bookMeta.hasLore() ? bookMeta.getLore() : new ArrayList<>();
             assert lores != null;
             lores.add("§7");
-            lores.add(useInBooks ? "§a§lENABLED" : "§c§lDISABLED");
+            lores.add(useInBooks ? "§a§l开启" : "§c§l关闭");
             bookMeta.setLore(lores);
 
             book.setItemMeta(bookMeta);
@@ -109,7 +110,7 @@ public class SettingsWindow extends Window {
             List<String> lores = signMeta.hasLore() ? signMeta.getLore() : new ArrayList<>();
             assert lores != null;
             lores.add("§7");
-            lores.add(useOnSigns ? "§a§lENABLED" : "§c§lDISABLED");
+            lores.add(useOnSigns ? "§a§l开启" : "§c§l关闭");
             signMeta.setLore(lores);
 
             sign.setItemMeta(signMeta);

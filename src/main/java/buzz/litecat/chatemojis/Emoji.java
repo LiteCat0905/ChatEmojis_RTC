@@ -1,6 +1,6 @@
-package com.rmjtromp.chatemojis;
+package buzz.litecat.chatemojis;
 
-import static com.rmjtromp.chatemojis.ChatEmojis.NAME_PATTERN;
+import static buzz.litecat.chatemojis.ChatEmojis.NAME_PATTERN;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +9,6 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.rmjtromp.chatemojis.utils.BukkitUtils;
-import com.rmjtromp.chatemojis.utils.ComponentBuilder;
-import com.rmjtromp.chatemojis.utils.Version;
 import net.md_5.bungee.api.chat.BaseComponent;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.bukkit.ChatColor;
@@ -20,17 +17,20 @@ import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionDefault;
 
-import com.rmjtromp.chatemojis.exceptions.ConfigException;
-import com.rmjtromp.chatemojis.exceptions.InvalidEmojiException;
-import com.rmjtromp.chatemojis.exceptions.InvalidEmoticonException;
-import com.rmjtromp.chatemojis.exceptions.InvalidRegexException;
-
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.chat.hover.content.Text;
 import org.jetbrains.annotations.NotNull;
+
+import buzz.litecat.chatemojis.exceptions.ConfigException;
+import buzz.litecat.chatemojis.exceptions.InvalidEmojiException;
+import buzz.litecat.chatemojis.exceptions.InvalidEmoticonException;
+import buzz.litecat.chatemojis.exceptions.InvalidRegexException;
+import buzz.litecat.chatemojis.utils.BukkitUtils;
+import buzz.litecat.chatemojis.utils.ComponentBuilder;
+import buzz.litecat.chatemojis.utils.Version;
 
 class Emoji {
 
@@ -212,10 +212,10 @@ class Emoji {
             // add hover and click events if player has admin permissions
             if(player.hasPermission("chatemojis.admin")) {
                 BaseComponent[] hoverMessage = new ComponentBuilder(String.join("\n", BukkitUtils.colorEncode(
-                        "&fPermission Node:",
+                        "&f权限节点:",
                         "&7" + getPermission().getName(),
                         "",
-                        "&eClick to Copy!"
+                        "&e点击复制！"
                 ))).create();
 
                 // new Text(BaseComponent[]) is not added until 1.16

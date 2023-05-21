@@ -1,4 +1,4 @@
-package com.rmjtromp.chatemojis.utils;
+package buzz.litecat.chatemojis.utils;
 
 import com.google.common.collect.Iterables;
 import org.bukkit.Bukkit;

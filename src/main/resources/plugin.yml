@@ -1,14 +1,14 @@
-name: ChatEmojis
+name: RTChatEmojis
 version: ${project.version}
-main: com.rmjtromp.chatemojis.ChatEmojis
+main: buzz.litecat.chatemojis.ChatEmojis
 api-version: 1.13
-authors: [ RMJTromp ]
+authors: [ RMJTromp,LiteCat ]
 soft-depend: [ PlaceholderAPI, Essentials ]
 
 commands:
   emoji:
     usage: <command>
-    aliases: emojis
+    aliases: [ emojis ]
     description: Shows a list of emojis
 
 permissions:

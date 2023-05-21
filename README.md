@@ -1,59 +1,56 @@
 # ChatEmojis
-Chat Emojis is a lightweight plugin that replaces emoticons with 'emojis'.
-ChatEmojis allows you to add your own emojis in the config file and supports multiple emoticons, random emoji selection, and regular expression capturing. Chat Emojis comes with 36 default emojis including all of the emojis on Hypixel.
+聊天表情包是一个轻量级插件，它用“表情包”代替符号。
+ChatEmojis允许您在配置文件中添加自己的表情，并支持多个表情、随机表情符号选择和正则表达式捕获。聊天表情符号附带36个默认表情符号，包括Hypixel上的所有表情符号。
 
-**Required Java Version:** Java 8+
+**需要 Java Version:** Java 8+
 
-# Commands
-| Command | Description | Permission |
+# 命令
+| 命令 | 描述 | 权限 |
 | ------  | ------ | ------ |
-| `/emoji [list]` | Shows list of emojis | `chatemojis.list` |
-| `/emoji help` | Shows list of commands | none |
-| `/emoji reload` | Reloads all emojis | `chatemojis.reload` |
-| `/emoji version` | Shows the plugin's version | none |
-| `/emoji settings` | Shows list of emojis | `chatemojis.admin` |
+| `/emoji [list]` | 显示表情符号列表 | `chatemojis.list` |
+| `/emoji help` | 显示命令列表 | none |
+| `/emoji reload` | 重新加载所有表情符号 | `chatemojis.reload` |
+| `/emoji version` | 显示插件的版本 | none |
+| `/emoji settings` | 显示表情符号设置 | `chatemojis.admin` |
 
-# Permissions
-| Permission Node | Default | Description
+# 权限
+| 权限节点 | 默认 | 描述
 | ------ | ------ | ------ |
-| chatemojis.list | Everyone | Allowes access to use /emoji [list] |
+| chatemojis.list | 所有人 | Allowes access to use /emoji [list] |
 | chatemojis.use.* | OP | Permission to use all emojis |
 | chatemojis.reload | OP | Allowes access to reload emojis |
 | chatemojis.admin | OP | Allowes access to change plugin settings |
 | chatemojis.* | OP | Permission to use all emojis and /emoji command |
 
-**Emoji-Specific Permission**:
-Ungrouped emojis permission is as easy as `chatemojis.use.<name>`
-Grouped emojis permission needs to include the path to the group (ex. `chatemojis.use.<group-path>.<name>`)
-If you still don't understand how to get emoji-specific permission- as a server operator you're able to hover over the emoji (in the `/emoji` list) to view the permission node for that specific emoji.
+**Emoji-特定权限**:
+未分组的表情符号权限就像“chatemojis.use”一样简单。<name>'
+分组表情符号权限需要包含群组的路径（例如，'chatemojis.use.<group-path>.<name>'）
+如果您仍然不了解如何获得特定于表情符号的权限 - 作为服务器操作员，您可以将鼠标悬停在表情符号上（在“/emoji”列表中）以查看该特定表情符号的权限节点。
 
-# Dependencies
-ChatEmojis does not hard-depend on any other plugins; Meaning **none** of these dependencies are required for ChatEmojis to work.
-- **[PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)** is used for placeholder parsing.
-- **[EssentialsX](https://www.spigotmc.org/resources/essentialsx.9089/)** is used for parsing emoticons in direct messages.
+# 依赖性
+聊天表情符号不硬依赖任何其他插件;这意味着这些依赖项中的**没有**是ChatEmojis工作所必需的。
+- **[PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)** 用于占位符分析。
+- **[EssentialsX](https://www.spigotmc.org/resources/essentialsx.9089/)** 用于解析直接消息中的表情符号。
 
-Please note that if you are using PlaceholderAPI, you must also install the PlaceholderAPI Extension corresponding to the placeholder you're trying to access, more about this can be found [here](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders).
+请注意，如果您使用的是PlaceholderAPI，则还必须安装与您尝试访问的占位符相对应的PlaceholderAPI扩展，有关此内容的更多信息可以[此处]（https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders）。
 
-# How to create your own Emoji
-A full tutorial and detailed explanation on how to create your own emoji can be found [here](https://github.com/Mxlvin/ChatEmojis/wiki/How-to-create-your-own-emoji).
+# 如何创建自己的表情符号
+有关如何创建自己的表情符号的完整教程和详细说明可以[这里]（https://github.com/Mxlvin/ChatEmojis/wiki/How-to-create-your-own-emoji）。
 
-# Emoji List (Screenshot)
-![List of Emojis](https://i.imgur.com/B0s6wga.png)
+# 表情符号列表（截图）
+![表情符号列表](https://i.imgur.com/B0s6wga.png)
 
-# Official Resouce Links
-[SpigotMC](https://www.spigotmc.org/resources/chatemojis.88027/), [MC-Market](https://www.mc-market.org/resources/19063/).
+# 许可证
+本项目受 [GNU 通用公共许可证 v3.0]（https://github.com/Mxlvin/ChatEmojis/blob/main/LICENSE） 的约束。这仅适用于直接位于此干净存储库中的源代码。
+对于那些不熟悉许可证的人，以下是其要点的摘要。这绝不是法律建议，也不具有法律约束力。
+您可以
+ -用
+ -共享
+ -修改
 
-# License
-This project is subject to the [GNU General Public License v3.0](https://github.com/Mxlvin/ChatEmojis/blob/main/LICENSE). This does only apply for source code located directly in this clean repository.
-For those who are unfamiliar with the license, here is a summary of its main points. This is by no means legal advice nor legally binding.
-You are allowed to
- - use
- - share
- - modify
+该项目全部或部分免费，甚至商业。但是，请考虑以下事项：
 
-this project entirely or partially for free and even commercially. However, please consider the following:
+- **您必须披露您修改作品的源代码以及您从该项目中获取的源代码。这意味着不允许在闭源（甚至混淆）应用程序中（甚至部分）使用此项目中的代码。
+ - **您修改后的应用程序也必须根据 GPL 获得许可**
 
- - **You must disclose the source code of your modified work and the source code you took from this project. This means you are not allowed to use code from this project (even partially) in a closed-source (or even obfuscated) application.**
- - **Your modified application must also be licensed under the GPL**
-
-Do the above and share your source code with everyone; just like we do.
+执行上述操作并与所有人共享您的源代码;就像我们一样。
